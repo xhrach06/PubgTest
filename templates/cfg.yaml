@@ -1,12 +1,7 @@
 apiVersion: v1
 data:
   config.yaml: |
-    server: {{.Values.config.server}}
-    db: {{.Values.config.db}}
-    api: {{.Values.config.api}}
-    exceptions: {{.Values.config.exceptions}}
-    log: {{.Values.volumes.log}}
-    endpoints: {{.Values.config.endpoints}}
+    {{.Values.config}}
 
 kind: ConfigMap
 metadata:
